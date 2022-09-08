@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INTERMARKS</title>
+	<style>
+		body{
+			background:linear-gradient(to right,#FF9A8B,#FF6A88,#FF99AC);
+		}
+		form{
+			margin-left: 30vw;
+			margin-top: 8%;
+			background:lightblue;
+			padding: 40px;
+			width: 400px;
+			font-size: 28px;
+			font-family: impact;
+			letter-spacing: 1.5px;
+			border-radius: 15px 15px;
+			border:3px solid;
+		}
+		input{
+			height: 38px;
+			width: 390px;
+			border-radius: 6px 6px;
+			border:2px solid;
+			font-size: 25px;
+		}
+		#btn{
+			height: 43px;
+			width: 220px;
+			margin-left: 70px;
+			margin-top: 15px;
+			background-color:gold;
+			border-radius: 8px;
+			font-size: 20px;
+			font-weight: 700;
+		}
+		#home{
+			height: 3vw;
+			width: 12vw;
+			border-radius: 8px;
+			margin: 0px;
+			padding: 0px;
+			background-color:lightgreen;
+			font-size: 25px;
+			position: absolute;
+			top: 5px;
+			left: 0px;
+		}
+	</style>
+	<script>
+		function calculateFun()
+		{
+			var val1=Number(document.getElementById("i1").value)
+			var val2=Number(document.getElementById("i2").value)
+			var val3=Number(document.getElementById("i3").value)
+			var val4=Number(document.getElementById("i4").value)
+			if(val1>10 || val2>10)
+			{
+				alert("AAT MARKS SHOULD BE <=10")
+			}
+			else if(val3>35 || val4>35)
+			{
+				alert("MID MARKS SHOULD BE <=35")
+			}
+			else
+			{
+				var aat=(val1+val2)/2;
+				var midBest,midSecondBest
+				if(val3>val3)
+				{
+					midBest=(val3)/(2.3333333333333)
+					midSecondBest=(val4)/(7)
+				}
+				else{
+					midBest=(val4)/(2.3333333333333)
+					midSecondBest=(val3)/(7)
+				}
+				var res=	(aat)+(midBest+midSecondBest)
+				document.getElementById("output").value=res
+				document.getElementById("output").style.backgroundColor="lightgreen"
+				alert(res)
+			}
+		}
+	</script>
+</head>
+<body id="bd">
+		<button onclick="history.back()" id="home">HOME</button>
+		<form>
+			<label>ENTER AAT-I  MARKS</label><br>
+			<input id="i1" type="text" autocomplete="off"><br>
+			<label>ENTER AAT-II  MARKS</label><br>
+			<input id="i2" type="text" autocomplete="off"><br>
+			<label>ENTER MID-I  MARKS</label><br>
+			<input id="i3" type="text" autocomplete="off"><br>
+			<label>ENTER MID-II  MARKS</label><br>
+			<input id="i4" type="text" autocomplete="off"><br>
+			RESULT
+			<input type="text" id="output" autocomplete="off">
+			<button id="btn" type="button" onclick="calculateFun()" >CALCULATE</button>
+		</form>
+</body>
+</html>
