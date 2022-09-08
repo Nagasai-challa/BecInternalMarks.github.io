@@ -55,21 +55,32 @@
 			var val2=Number(document.getElementById("i2").value)
 			var val3=Number(document.getElementById("i3").value)
 			var val4=Number(document.getElementById("i4").value)
-			var aat=(val1+val2)/2;
-			var midBest,midSecondBest
-			if(val3>val3)
+			if(val1>10 || val2>10)
 			{
-				midBest=(val3)/(2.3333333333333)
-				midSecondBest=(val4)/(7)
+				alert("AAT MARKS SHOULD BE <=10")
 			}
-			else{
-				midBest=(val4)/(2.3333333333333)
-				midSecondBest=(val3)/(7)
+			else if(val3>35 || val4>35)
+			{
+				alert("MID MARKS SHOULD BE <=35")
 			}
-			var res=	(aat)+(midBest+midSecondBest)
-			document.getElementById("output").value=res
-			document.getElementById("output").style.backgroundColor="lightgreen"
-			alert(res)
+			else
+			{
+				var aat=(val1+val2)/2;
+				var midBest,midSecondBest
+				if(val3>val3)
+				{
+					midBest=(val3)/(2.3333333333333)
+					midSecondBest=(val4)/(7)
+				}
+				else{
+					midBest=(val4)/(2.3333333333333)
+					midSecondBest=(val3)/(7)
+				}
+				var res=	(aat)+(midBest+midSecondBest)
+				document.getElementById("output").value=res
+				document.getElementById("output").style.backgroundColor="lightgreen"
+				alert(res)
+			}
 		}
 	</script>
 </head>
