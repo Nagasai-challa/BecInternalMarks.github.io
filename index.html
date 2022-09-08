@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>interMarks</title>
+	<style>
+		body{
+			background:linear-gradient(to left, #c31432,#240b36);
+		}
+		form{
+			background-color: lightgreen;
+			height: 150px;
+			width: 400px;
+			font-size: 28px;
+			margin-top: 17%;
+			margin-left: 30%;
+			padding:30px;
+			border-radius: 10px 10px;
+			font-family: impact;
+			letter-spacing: 1.5px;
+			box-shadow: 2px 3px 20px;
+			border:4px solid;
+		}
+		select{
+			height: 40px;
+			width: 380px;
+			font-size: 20px;
+			border-radius: 8px 8px;
+			border:2px solid;
+		}
+		button{
+			height: 45px;
+			width: 200px;
+			margin-top: 25px;
+			margin-left: 90px;
+			border-radius: 5px 5px;
+			background-color: pink;
+			font-size: 20px;
+		}
+		button:hover{
+			background-color: cyan;
+		}
+		footer{
+			background-color: black;
+			margin-top: 20%;
+			height: 100px;
+			width: 100%;
+			max-width: 100%;
+		}
+		img{
+			width: 100%;
+			position: absolute;
+			top:0px;
+			left: 0px;
+		}
+	</style>
+	<script>
+		function mainFun()
+		{
+			var val=document.getElementById("select").value
+			if(val=="select"){
+				alert("SELECT A VALID OPTION")
+			}
+			else if(val=="CIVIL"){
+				document.location.href="file2.html"
+			}
+			else{
+				document.location.href="file1.html"
+			}
+		}
+	</script>
+</head>
+<body>
+		<img src="main.png">
+		<form id="myDiv">
+			<label>SELECT YOUR BRANCH</label><br/>
+			<select id="select">
+				<option value="select">-SELECT-</option>
+				<option value="CSE">CSE</option>
+				<option value="IT">IT</option>
+				<option value="CIVIL">CIVIL</option>
+				<option value="DS">CS & DS</option>
+				<option value="EEE">EEE</option>
+				<option value="EIE">EIE</option>
+				<option>MECH</option>
+			</select><br/>
+			<button type="button" id="btn" onclick="mainFun()">SUBMIT</button>
+		</form>
+</body>
+</html>
