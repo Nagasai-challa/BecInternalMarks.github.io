@@ -55,23 +55,33 @@
 			var val4=Number(document.getElementById("i4").value)
 			var val5=Number(document.getElementById("i5").value)
 			var val6=Number(document.getElementById("i6").value)
-			var aat=(val1+val2)/2;
-			var ha=(val3+val4)/2
-			var midBest,midSecondBest
-			if(val5>val6)
+			if(val1>10 || val2>10 || val3>10 || val4>10)
 			{
-				midBest=(val5)/(2.3333333333333)
-				midSecondBest=(val6)/(7)
+				alert("CLASS TEST OR HA MARKS SHOULD BE <=10")
+			}
+			else if(val5>35 || val6>35)
+			{
+				alert("MID MARKS SHOULD BE <=35")
 			}
 			else{
-				midBest=(val5)/(2.3333333333333)
-				midSecondBest=(val6)/(7)
+				var aat=(val1+val2)/2;
+				var ha=(val3+val4)/2
+				var midBest,midSecondBest
+				if(val5>val6)
+				{
+					midBest=(val5)/(2.3333333333333)
+					midSecondBest=(val6)/(7)
+				}
+				else{
+					midBest=(val5)/(2.3333333333333)
+					midSecondBest=(val6)/(7)
+				}
+				var res=((aat+ha)/2)+(midBest+midSecondBest)
+				document.getElementById("output").value=res
+				document.getElementById("output").style.backgroundColor="lightgreen"
+				document.getElementById("output").value=res
+				alert(res)
 			}
-			var res=((aat+ha)/2)+(midBest+midSecondBest)
-			document.getElementById("output").value=res
-			document.getElementById("output").style.backgroundColor="lightgreen"
-			document.getElementById("output").value=res
-			alert(res)
 		}
 	</script>
 </head>
